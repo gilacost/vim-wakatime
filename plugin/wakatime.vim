@@ -315,10 +315,7 @@ EOF
     endfunction
 
     function! s:SetupConfigFile()
-        echom "Config already setup " . s:config_file_already_setup
         if !s:config_file_already_setup
-            echom "Inside config already setup " . s:config_file
-
             " Create config file if does not exist
             if !filereadable(s:config_file)
                 call writefile(s:default_configs, s:config_file)
